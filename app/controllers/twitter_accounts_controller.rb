@@ -1,12 +1,15 @@
+require "oauth"
+
 class TwitterAccountsController < ApplicationController
   def index
-    # client = Twitter::REST::Client.new do |config|
-    #   config.consumer_key        = Rails.
-    #   config.consumer_secret     = "YOUR_CONSUMER_SECRET"
-    #   config.access_token        = "YOUR_ACCESS_TOKEN"
-    #   config.access_token_secret = "YOUR_ACCESS_SECRET"
-    # end
+  end
 
-    render :json => Rails.application.secrets.twitter_api_key
+  def illustrators
+    start = Time.now
+    followers = client.followers params[:screen_name]
+    time = Time.now - start
+    respond_to do |format|
+        format.json {render :json => time} 
+    end
   end
 end

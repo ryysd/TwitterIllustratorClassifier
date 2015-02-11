@@ -1,5 +1,7 @@
-TwitterIllustratorClassifier::Application.routes.draw do
-  get "twitter_accounts/index"
+Rails.application.routes.draw do
+  get "/twitter_accounts/index"
+  get "/twitter_accounts/:screen_name/illustrators" => "twitter_accounts#illustrators"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
