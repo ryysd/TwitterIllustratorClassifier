@@ -32,7 +32,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
+gem 'better_errors', group: [:development, :test]
+gem 'binding_of_caller', group: [:development, :test]
+gem 'brakeman', group: :development
+gem 'rails_best_practices', group: :development
+gem 'pry-rails', group: [:development, :test]
+gem 'rspec-rails', group: [:development, :test]
+gem 'factory_girl_rails', group: [:development, :test]
+
+# Use ActiveMode_ has_secure_passworr
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
