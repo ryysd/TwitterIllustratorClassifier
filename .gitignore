@@ -44,3 +44,5 @@ doc/
 /front/.tmp
 /front/.sass-cache
 /front/app/bower_components
+
+/config/secrets.yml
