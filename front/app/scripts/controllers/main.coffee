@@ -9,8 +9,9 @@
 ###
 angular.module('frontApp')
   .controller 'MainCtrl', ["$scope", "Api", ($scope, Api) -> 
-    $scope.results = JSON.parse localStorage.getItem 'dummy_response'
+    $scope.items = JSON.parse localStorage.getItem 'dummy_response'
     # (Api.getIllustrators 'dummy').then (res) -> 
-    #   $scope.results = res.data
+    #   $scope.items = res.data
+    #   localStorage.setItem 'dummy_response', JSON.stringify res.data
     #   console.log res.data
   ]

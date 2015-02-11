@@ -11,7 +11,7 @@ class TwitterAccount
     end
 
     @description = @raw_data[:description]
-    @url = @raw_data[:entities][:url][:urls][:expanded_url] rescue nil
+    @url = @raw_data[:entities][:url][:urls][:expanded_url].gsub 'normal', 'bigger' rescue nil
   end
 
   def url_include_pixiv_url?

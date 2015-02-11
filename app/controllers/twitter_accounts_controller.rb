@@ -8,9 +8,9 @@ class TwitterAccountsController < ApplicationController
       return
     end
 
-    # followers = client.followers params[:screen_name]
-    # illustrators = followers.select {|follower| (TwitterAccount.new raw_data: follower).is_illustrator?}
-    illustrators = ActiveRecord::Base.connection.select("select * from dummy_data")
+    followers = client.followers params[:screen_name]
+    illustrators = followers.select {|follower| (TwitterAccount.new raw_data: follower).is_illustrator?}
+    # illustrators = ActiveRecord::Base.connection.select("select * from dummy_data")
     render :json => illustrators
   end
 end

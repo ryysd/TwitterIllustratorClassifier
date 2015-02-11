@@ -11,7 +11,7 @@
 
   angular.module('frontApp').controller('MainCtrl', [
     "$scope", "Api", function($scope, Api) {
-      return $scope.results = JSON.parse(localStorage.getItem('dummy_response'));
+      return $scope.items = JSON.parse(localStorage.getItem('dummy_response'));
     }
   ]);
 
