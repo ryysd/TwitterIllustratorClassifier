@@ -1,0 +1,17 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="result in results">
+        <td><a href=https://twitter.com/{{result.screen_name}}><img src={{result.profile_image_url}}></a></td>
+        <td>{{result.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

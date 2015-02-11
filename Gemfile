@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.0'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -27,12 +27,28 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'twitter'
+# gem 'omniauth'
+gem 'rack-cors', :require => 'rack/cors', group: [:development, :test]
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
+gem 'better_errors', group: [:development, :test]
+gem 'binding_of_caller', group: [:development, :test]
+gem 'brakeman', group: :development
+gem 'rails_best_practices', group: :development
+gem 'pry-rails', group: [:development, :test]
+gem 'rspec-rails', group: [:development, :test]
+gem 'factory_girl_rails', group: [:development, :test]
+
+gem 'compass-rails'
+
+gem 'spring',        group: :development
+
+# Use ActiveMode_ has_secure_passworr
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
