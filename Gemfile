@@ -28,7 +28,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'twitter'
-gem 'omniauth'
+# gem 'omniauth'
+gem 'rack-cors', :require => 'rack/cors', group: [:development, :test]
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

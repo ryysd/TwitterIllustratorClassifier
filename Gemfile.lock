@@ -81,7 +81,6 @@ GEM
     fssm (0.2.10)
     haml (4.0.6)
       tilt
-    hashie (3.4.0)
     highline (1.6.21)
     hike (1.2.3)
     http (0.6.3)
@@ -107,9 +106,6 @@ GEM
     multipart-post (2.0.0)
     mysql2 (0.3.17)
     naught (1.0.0)
-    omniauth (1.2.2)
-      hashie (>= 1.2, < 4)
-      rack (~> 1.0)
     polyglot (0.3.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -118,6 +114,7 @@ GEM
     pry-rails (0.3.3)
       pry (>= 0.9.10)
     rack (1.5.2)
+    rack-cors (0.3.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.0)
@@ -232,8 +229,8 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mysql2
-  omniauth
   pry-rails
+  rack-cors
   rails (= 4.1.0)
   rails_best_practices
   rspec-rails
