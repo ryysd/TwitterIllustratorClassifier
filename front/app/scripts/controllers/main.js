@@ -11,10 +11,7 @@
 
   angular.module('frontApp').controller('MainCtrl', [
     "$scope", "Api", function($scope, Api) {
-      return (Api.getIllustrators('dummy')).then(function(res) {
-        $scope.results = res.data;
-        return console.log(res.data);
-      });
+      return $scope.results = JSON.parse(localStorage.getItem('dummy_response'));
     }
   ]);
 
