@@ -38,3 +38,9 @@ doc/
 .project
 .DS_Store
 .idea
+
+# front files
+/front/node_modules
+/front/.tmp
+/front/.sass-cache
+/front/app/bower_components

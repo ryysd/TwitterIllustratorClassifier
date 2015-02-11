@@ -40,6 +40,8 @@ gem 'pry-rails', group: [:development, :test]
 gem 'rspec-rails', group: [:development, :test]
 gem 'factory_girl_rails', group: [:development, :test]
 
+gem 'spring',        group: :development
+
 # Use ActiveMode_ has_secure_passworr
 # gem 'bcrypt', '~> 3.1.7'
 
