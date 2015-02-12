@@ -11,7 +11,11 @@
 
   angular.module('frontApp').controller('MainCtrl', [
     "$scope", "Api", function($scope, Api) {
-      return $scope.items = JSON.parse(localStorage.getItem('dummy_response'));
+      return (Api.getIllustrators('dummy')).then(function(res) {
+        $scope.items = res.data;
+        localStorage.setItem('dummy_response', JSON.stringify(res.data));
+        return console.log(res.data);
+      });
     }
   ]);
 
