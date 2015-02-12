@@ -2,7 +2,9 @@
   <h1>{{full_items.length}} users found.</h1>
   <div masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile"}' infinite-scroll="loadMore()" infinite-scroll-disabled='loading'>
     <div class="tile image-tile" masonry-tile ng-repeat="item in items">
-      <img class="lazy" width="73" height="73" src="images/dummy-1px.png" data-src={{item.profile_image_url}} tooltip={{item.name}} ng-click='showDetail($index)'>
+      <div class="cell">
+        <img class="lazy" src="images/ajax-loader.gif" data-src={{item.profile_image_url}} tooltip={{item.name}} ng-click='showDetail($index)'>
+      </div>
     </div>
   </div>
 </div>
