@@ -1,6 +1,10 @@
-<div masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile"}'>
-  <!-- items -->
-  <div class="tile" masonry-tile ng-repeat="item in items">
-    <img src={{item.profile_image_url}}>
+<div ng-controller='AccountListCtrl'>
+  <h1>{{full_items.length}} users found.</h1>
+  <div masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile"}'>
+    <div class="tile" masonry-tile ng-repeat="item in items">
+      <img class="lazy" width="73" height="73" src="images/dummy-1px.png" data-src={{item.profile_image_url}}>
+    </div>
   </div>
+  
+  <div class="btn btn-lg btn-primary" ng-click="loadMore()"> More </div>
 </div>
