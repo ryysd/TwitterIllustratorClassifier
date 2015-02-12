@@ -1,17 +1,10 @@
-<div class="container">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="result in results">
-        <td><a href=https://twitter.com/{{result.screen_name}}><img src={{result.profile_image_url}}></a></td>
-        <td>{{result.name}}</td>
-      </tr>
-    </tbody>
-  </table>
+<div ng-controller='AccountListCtrl'>
+  <div class="notification alert alert-success"><strong>{{full_items.length}}</strong> illustrators</div>
+  <div masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile"}' infinite-scroll="loadMore()" infinite-scroll-disabled='loading'>
+    <div class="tile image-tile" masonry-tile ng-repeat="item in items">
+      <div class="cell">
+        <img class="lazy img-circle" src="images/ajax-loader.gif" data-src={{item.profile_image_url}} tooltip={{item.name}} ng-click='showDetail($index)'>
+      </div>
+    </div>
+  </div>
 </div>

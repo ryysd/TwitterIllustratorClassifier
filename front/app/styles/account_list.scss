@@ -1,0 +1,16 @@
+.image-tile {
+  width: 73px;
+  height: 73px;
+  cursor: pointer;
+  display:table;
+}
+
+.image-tile .cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.notification {
+  text-align: center;
+}
