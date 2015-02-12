@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'masonry',
-    'infinite-scroll'
+    'infinite-scroll',
+    'ui.bootstrap'
   ])
   .config ($routeProvider) ->
     $routeProvider

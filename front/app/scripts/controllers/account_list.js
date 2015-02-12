@@ -10,11 +10,11 @@
   */
 
   angular.module('frontApp').controller('AccountListCtrl', [
-    "$scope", "Api", "Const", function($scope, Api, Const) {
+    "$scope", "$window", "Api", "Const", function($scope, $window, Api, Const) {
       $scope.full_items = JSON.parse(localStorage.getItem('dummy_response'));
       $scope.current_size = Math.min(Const.AccountList.page_size, $scope.full_items.length);
       $scope.items = $scope.full_items.slice(0, $scope.current_size);
-      return $scope.loadMore = function() {
+      $scope.loadMore = function() {
         var new_item, new_items, next_size, _i, _len;
         next_size = Math.min($scope.current_size + Const.AccountList.page_size, $scope.full_items.length);
         new_items = $scope.full_items.slice($scope.current_size, next_size);
@@ -23,6 +23,13 @@
           $scope.items.push(new_item);
         }
         return $scope.current_size = next_size;
+      };
+      return $scope.showDetail = function(index) {
+        var left, top;
+        left = ($window.screen.width - Const.AccountList.modal_width) / 2;
+        top = ($window.screen.height - Const.AccountList.modal_height) / 2;
+        $window.open("https://twitter.com/intent/user?screen_name=" + $scope.full_items[index].screen_name, '', "width=" + Const.AccountList.modal_width + ", height=" + Const.AccountList.modal_height + ", left=" + left + ", top=" + top + " scrollbars=yes");
+        return true;
       };
     }
   ]);
