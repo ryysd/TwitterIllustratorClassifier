@@ -1,9 +1,9 @@
 <div ng-controller='AccountListCtrl'>
-  <h1>{{full_items.length}} users found.</h1>
+  <div class="notification alert alert-success"><strong>{{full_items.length}}</strong> illustrators</div>
   <div masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile"}' infinite-scroll="loadMore()" infinite-scroll-disabled='loading'>
     <div class="tile image-tile" masonry-tile ng-repeat="item in items">
       <div class="cell">
-        <img class="lazy" src="images/ajax-loader.gif" data-src={{item.profile_image_url}} tooltip={{item.name}} ng-click='showDetail($index)'>
+        <img class="lazy img-circle" src="images/ajax-loader.gif" data-src={{item.profile_image_url}} tooltip={{item.name}} ng-click='showDetail($index)'>
       </div>
     </div>
   </div>
