@@ -27,9 +27,9 @@ config/secrets.yml
 .rvmrc
 
 # if using bower-rails ignore default bower_components path bower.json files
-/vendor/assets/bower_components
-*.bowerrc
-bower.json
+# /vendor/assets/bower_components
+# *.bowerrc
+# bower.json
 
 # Ignore other unneeded files.
 doc/
@@ -43,4 +43,4 @@ doc/
 /front/node_modules
 /front/.tmp
 /front/.sass-cache
-/front/app/bower_components
+/front/bower_components
