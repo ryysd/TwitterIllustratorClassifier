@@ -10,7 +10,7 @@
    # Main module of the application.
   */
 
-  angular.module('frontApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch', 'masonry']).config(function($routeProvider) {
+  angular.module('frontApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch', 'masonry', 'infinite-scroll']).config(function($routeProvider) {
     return $routeProvider.when('/', {
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'
